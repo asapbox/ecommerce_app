@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../model/best_seller.dart';
-import '../model/baseRepository.dart';
+import '../model/base_repository.dart';
 
 class BaseService {
   final String baseUrl =
@@ -21,10 +21,4 @@ class BaseService {
           'Failed to load data. StatusCode = ${response.statusCode}');
     }
   }
-}
-
-void main() async {
-  final result = await BaseService().fetchData();
-  print(result.homeStore);
-
 }
