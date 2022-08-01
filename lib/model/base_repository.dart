@@ -1,13 +1,13 @@
 import 'best_seller.dart';
 import 'home_store.dart';
 
-class baseRepository {
+class BaseRepository {
   List<HomeStore>? homeStore;
   List<BestSeller>? bestSeller;
 
-  baseRepository({this.homeStore, this.bestSeller});
+  BaseRepository({this.homeStore, this.bestSeller});
 
-  baseRepository.fromJson(Map<String, dynamic> json) {
+  BaseRepository.fromJson(Map<String, dynamic> json) {
     if (json['home_store'] != null) {
       homeStore = <HomeStore>[];
       json['home_store'].forEach((v) {

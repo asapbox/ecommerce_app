@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/view_model/view_model.dart';
+import 'package:ecommerce_app/controller/view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ecommerce_app/navigation/sub_router_delegate.dart';

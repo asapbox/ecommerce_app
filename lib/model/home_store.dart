@@ -15,12 +15,12 @@ class HomeStore {
         this.isBuy});
 
   HomeStore.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    isNew = json['is_new'];
-    title = json['title'];
-    subtitle = json['subtitle'];
-    picture = json['picture'];
-    isBuy = json['is_buy'];
+    id = json['id'] as int;
+    isNew = json['is_new'] ?? false;
+    title = json['title'] as String;
+    subtitle = json['subtitle'] as String;
+    picture = json['picture'] as String;
+    isBuy = json['is_buy'] as bool;
   }
 
   Map<String, dynamic> toJson() {

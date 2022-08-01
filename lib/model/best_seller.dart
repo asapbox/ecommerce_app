@@ -15,12 +15,12 @@ class BestSeller {
       this.picture});
 
   BestSeller.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    isFavorites = json['is_favorites'];
-    title = json['title'];
-    priceWithoutDiscount = json['price_without_discount'];
-    discountPrice = json['discount_price'];
-    picture = json['picture'];
+    id = json['id'] as int;
+    isFavorites = json['is_favorites'] as bool;
+    title = json['title'] as String;
+    priceWithoutDiscount = json['price_without_discount'] as int;
+    discountPrice = json['discount_price'] as int;
+    picture = json['picture'] as String;
   }
 
   Map<String, dynamic> toJson() {

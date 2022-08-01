@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/navigation/paths.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/view_model/view_model.dart';
+import 'package:ecommerce_app/controller/view_model.dart';
 
 import 'package:ecommerce_app/view/pages/pages.dart';
 
@@ -31,7 +31,8 @@ class SubRouterDelegate extends RouterDelegate
         return true;
       },
       pages: [
-        mainPage(),
+       mainPage(),
+
         if (context.watch<NavigationManager>().isProductDetailsPage)
           productDetailsPage(),
         if (context.watch<NavigationManager>().isMyCartPage)
@@ -53,17 +54,17 @@ class SubRouterDelegate extends RouterDelegate
 
   MaterialPage productDetailsPage() {
     return MaterialPage(
-      name: Paths.mainPagePath,
-      key: ValueKey(Paths.mainPagePath),
-      child: const MainPage(),
+      name: Paths.productDetailsPagePath,
+      key: ValueKey(Paths.productDetailsPagePath),
+      child: const DetailsPage(),
     );
   }
 
   MaterialPage myCartPage() {
     return MaterialPage(
-      name: Paths.mainPagePath,
-      key: ValueKey(Paths.mainPagePath),
-      child: const MainPage(),
+      name: Paths.myCartPagePath,
+      key: ValueKey(Paths.myCartPagePath),
+      child: const MyCartPage(),
     );
   }
 
