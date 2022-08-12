@@ -53,7 +53,7 @@ class _DetailsPageState extends State<DetailsPage> {
               ItemDetailsWidget(
                 screenHeight: screenHeight,
                 screenWidth: screenWidth,
-                item: item,
+               item: item,
               ),
             ],
           );
@@ -99,7 +99,9 @@ class _DetailsPageState extends State<DetailsPage> {
                 color: Palette.orange,
               ),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<NavigationManager>().setIsMyCartPage(true);
+                },
                 icon: const Icon(
                   CustomIcons.bag,
                   color: Colors.white,

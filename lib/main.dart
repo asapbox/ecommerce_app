@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controller/view_model.dart';
+import 'package:ecommerce_app/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ecommerce_app/navigation/sub_router_delegate.dart';
@@ -40,7 +41,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Ecommerce',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Palette.orange,
+        ),
+        // textTheme: ,
+        fontFamily: 'Mark-Pro',
       ),
       home: Router(
         routerDelegate: _subRouterDelegate,

@@ -1,12 +1,8 @@
 import 'package:ecommerce_app/apis/base_service.dart';
-import 'package:ecommerce_app/controller/view_model.dart';
 import 'package:ecommerce_app/palette.dart';
-import 'package:ecommerce_app/view/widgets/best_seller_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/model/model.dart';
 import 'package:ecommerce_app/view/widgets/widgets.dart';
-import 'package:ecommerce_app/view/widgets/custom_icons.dart';
-import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -55,7 +51,7 @@ class _MainPageState extends State<MainPage> {
                   Text('view all'),
                 ],
               ),
-              buildSelectCategory(screenHeight),
+              buildCategories(screenHeight),
               buildSearchBar(screenHeight),
               HotSalesWidget(
                 homeStore: homeStore,
@@ -93,7 +89,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  Widget buildSelectCategory(double screenHeight) {
+  Widget buildCategories(double screenHeight) {
     List<IconData> icons = [
       CustomIcons.phones,
       CustomIcons.computer,
@@ -433,7 +429,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
       ),
-
+      // delete
       // child: ClipRRect(
       //   borderRadius: const BorderRadius.all(Radius.circular(70)),
       //

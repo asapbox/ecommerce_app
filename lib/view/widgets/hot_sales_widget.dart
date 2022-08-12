@@ -38,6 +38,7 @@ class _HotSalesWidgetState extends State<HotSalesWidget> {
         ),
         Container(
           height: (widget.screenHeight / 4.5),
+          // delete
           // foregroundDecoration: BoxDecoration(
           //   border: Border.all(
           //       width: 10,
